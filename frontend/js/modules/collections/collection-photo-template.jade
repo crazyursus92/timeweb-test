@@ -1,0 +1,16 @@
+-function prettyDate(dateString){
+
+-var date = new Date(dateString);
+-var d = date.getDate();
+-var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
+-var m = monthNames[date.getMonth()];
+-var y = date.getFullYear();
+-return d+' '+m+' '+y;
+-}
+a.collection-photo.col-md-4.col-sm-6.col-xs-12(href=urls.regular data-fancybox="images")
+    .panel
+        .panel-body
+            .collection-photo-img(style="background-image: url(#{urls.small})")
+            .row
+                .col-xs-6 Понравилось: #{likes}
+                .col-xs-6.text-right Опубликованно: #{prettyDate(created_at)}

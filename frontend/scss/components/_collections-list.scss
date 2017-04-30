@@ -1,0 +1,43 @@
+.collections-list{
+  opacity: 1;
+  position: relative;
+  transition: opacity .5s ease .2s;
+  min-height: 100vh;
+  &.load{
+    opacity: .5;
+
+    &:before{
+      opacity: 1;
+    }
+  }
+
+  &:before{
+    opacity: 0;
+    content: '';
+    transition: opacity .5s ease;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    left: 0;
+    position: absolute;
+    background-image: url(/img/preloader.gif);
+    width: 64px;
+    height: 64px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: auto;
+  }
+}
+.collections-list-item{
+  cursor: pointer;
+}
+.collections-list-item-img{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  &:after{
+    content: '';
+    display: block;
+    padding-top: 66.66%;
+  }
+}

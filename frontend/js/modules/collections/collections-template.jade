@@ -1,0 +1,14 @@
+.container-fluid.collections
+    .row.text-center
+        h1 Список коллекций
+    .row.collections-list.load
+    nav(aria-label="Page navigation")
+        ul.pager
+
+            - var prev_page = page - 1;
+            - if (prev_page)
+            li
+                a.pager-prev(href="#home/#{prev_page}") Предыдущая
+            - var next_page = page + 1;
+            li
+                a.pager-next(href="#home/#{next_page}") Следущая

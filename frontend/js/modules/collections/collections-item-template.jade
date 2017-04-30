@@ -1,0 +1,11 @@
+a.collections-list-item.col-md-4.col-sm-6.col-xs-12(href='#/collections/#{id}' )
+    .thumbnail
+        - var photo = '/img/default.jpg'
+            - if(cover_photo)
+            - photo = cover_photo.urls.small;
+        .collections-list-item-img(style="background-image: url(#{photo})")
+        .caption
+            h3 #{title}
+            .caption-body.row
+                .col-md-6 Автор: #{user.name}
+                .col-md-6.text-right Количество фото: #{total_photos}

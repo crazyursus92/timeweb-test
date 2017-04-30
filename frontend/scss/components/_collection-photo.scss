@@ -1,0 +1,10 @@
+.collection-photo-img{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  &:before{
+    content: '';
+    display: block;
+    padding-top: 66.66%;
+  }
+}

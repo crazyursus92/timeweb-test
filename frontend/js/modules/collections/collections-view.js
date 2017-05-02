@@ -66,7 +66,6 @@ export default Backbone.View.extend({
     },
     fetchCollection: function(){
         this.$el.find(this.selectors.list).addClass('load');
-        console.log($.param(this.fetchOptions()), this.fetchOptions());
         this.collection.url = vars.API_URL  + this.uri + '?' + $.param(this.fetchOptions());
         this.collection.fetch();
         return this;

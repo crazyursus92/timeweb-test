@@ -32,6 +32,7 @@ export default Backbone.View.extend({
             data = this.model.toJSON();
         }
         this.$el.html(template(data));
+
        return this;
     },
     renderCollection: function (model) {
@@ -42,5 +43,6 @@ export default Backbone.View.extend({
     renderCollectionPhoto: function(model){
         let view = new CollectionPhotoView({model: model});
         this.$el.find(selectors.photos).append(view.render().el);
+
     }
 });

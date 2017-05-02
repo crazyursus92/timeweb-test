@@ -5,7 +5,7 @@ import collections from "./modules/collections/index";
 import $ from "jquery";
 let Router = Backbone.Router.extend({
     routes: {
-        'home/': 'collections',
+        '': 'collections',
         'home/:page': 'collections',
         'collections/:id': 'collection',
 
@@ -22,8 +22,5 @@ let Router = Backbone.Router.extend({
 });
 $(document).ready(function () {
     let router = new Router();
-    router.on('route', function(){
-        console.log(arguments);
-    });
     Backbone.history.start();
 });
